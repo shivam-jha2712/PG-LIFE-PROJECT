@@ -10,9 +10,6 @@ This App mainly focuses on the pain points of students through which they can fi
 This is a website with some exciting functionality 
 
 Due to the existence of the database, it cannot be hosted on GitHub
-<<<<<<< HEAD
-I will link the video.
-=======
 I will link the video . You can dowload the source code and work it out on your own using XAMMP.
 
 ## FrontEnd-Section
@@ -103,4 +100,3 @@ localhost\pglife
 - [@Shivam Jha - github](https://github.com/shivam-jha2712)
 - [@Shivam Jha - linkedin](https://www.linkedin.com/in/shivamjha2712/)
   
->>>>>>> c9f4772f3b499a61dd49276a1143cd7f1a6e1c2c

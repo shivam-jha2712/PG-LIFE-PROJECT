@@ -1,24 +1,24 @@
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    full_name VARCHAR(100) NOT NULL,
     phone VARCHAR(20) NOT NULL,
     gender ENUM('male', 'female') NOT NULL,
-    college_name VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
+    college_name VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id)
 );
 
 CREATE TABLE cites(
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
+    name VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id)
 );
 
 CREATE TABLE properties(
     id INT NOT NULL AUTO_INCREMENT,
     city_id INT NOT NULL,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(100) NOT NULL,
     address VARCHAR(255) NOT NULL,
     description LONGTEXT NOT NULL,
     gender ENUM('male', 'female','unisex') NOT NULL,
@@ -26,8 +26,8 @@ CREATE TABLE properties(
     rating_clean FLOAT(2,1) NOT NULL,
     rating_food FLOAT(2,1) NOT NULL,
     rating_safety FLOAT(2,1) NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (city_id) REFERENCES cities (id)
+    PRIMARY KEY(id),
+    FOREIGN KEY (city_id) REFERENCES cities(id)
 );
 
 CREATE TABLE amenities (
@@ -35,7 +35,7 @@ CREATE TABLE amenities (
     name VARCHAR(255) NOT NULL,
     type VARCHAR(255) NOT NULL,
     icon VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY(id)
 );
 
 CREATE TABLE properties_amenities(
@@ -44,7 +44,7 @@ CREATE TABLE properties_amenities(
     amenity_id INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (property_id) REFERENCES properties(id),
-    FOREIGN KEY (amenity_id) REFERENCES amenities(id),
+    FOREIGN KEY (amenity_id) REFERENCES amenities(id)
 );
 
 CREATE TABLE testimonials(
@@ -62,5 +62,5 @@ CREATE TABLE interested_users_properties (
     property_id INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (property_id) REFERENCES properties(id),
+    FOREIGN KEY (property_id) REFERENCES properties(id)
 );
