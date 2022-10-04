@@ -1,5 +1,5 @@
 
-# Property Finding and Adding Web-App
+# Property Finding Web-App
 
 This is my first attempt to create a complete Full-Stack Web Application that has both frontend and Backend attached to it.
 ### Purpose of this app
